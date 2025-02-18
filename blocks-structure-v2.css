@@ -1,0 +1,181 @@
+@import "/obsidian-general.css";
+.is-live-preview .cm-content {
+  /* --- Space between paragraphs */
+  /* --- List */
+  /* --- Callout, Quote, Code specifics */
+  /* --- Table */
+  /* == Headers spacing */
+  /* --- Spacing between Headers */
+}
+.is-live-preview .cm-content .cm-line:has(> br) {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+.is-live-preview .cm-content div + .cm-line {
+  padding-top: 1.2em;
+}
+.is-live-preview .cm-content .cm-line + .cm-line {
+  padding-top: 0.4em;
+}
+.is-live-preview .cm-content .media-embed {
+  padding-top: 1.2em;
+  padding-bottom: 0;
+}
+.is-live-preview .cm-content .cm-line + .media-embed {
+  padding-top: 0.6em;
+}
+.is-live-preview .cm-content .HyperMD-list-line + .HyperMD-list-line {
+  padding-top: 0.4em;
+}
+.is-live-preview .cm-content .media-embed:has(+ .HyperMD-quote, + .cm-callout, + .HyperMD-codeblock-begin), .is-live-preview .cm-content .cm-line:has(+ .HyperMD-quote, + .cm-callout, + .HyperMD-codeblock-begin) {
+  padding-bottom: 1.2em;
+}
+.is-live-preview .cm-content .cm-line:has(+ .HyperMD-codeblock-begin) {
+  padding-bottom: 0.6em;
+}
+.is-live-preview .cm-content .HyperMD-codeblock-end + .cm-line, .is-live-preview .cm-content .HyperMD-codeblock-end + .media-embed {
+  padding-top: 1.2em;
+}
+.is-live-preview .cm-content .cm-line:has(> .cm-trailing-space-new-line) + .cm-line {
+  padding-top: 0.2em;
+}
+.is-live-preview .cm-content .cm-callout + .cm-line:has(> br), .is-live-preview .cm-content .HyperMD-quote + .cm-line:has(> br), .is-live-preview .cm-content .HyperMD-codeblock-end + .cm-line:has(> br) {
+  line-height: 1.2em;
+}
+.is-live-preview .cm-content .HyperMD-quote, .is-live-preview .cm-content .HyperMD-codeblock {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+.is-live-preview .cm-content .cm-line:has(> br) + .cm-table-widget {
+  padding-top: 0.7em;
+  padding-bottom: 1.2em;
+}
+.is-live-preview .cm-content .cm-line:has(> br):has(+ .cm-table-widget) {
+  line-height: 0.5em;
+}
+.is-live-preview .cm-content .cm-table-widget + .media-embed, .is-live-preview .cm-content .cm-table-widget + .cm-line {
+  padding-top: 0;
+}
+.is-live-preview .cm-content .table-cell-wrapper .cm-line {
+  padding-top: 0;
+}
+.is-live-preview .cm-content .cm-line:has(> br) + *:not(.cm-table-widget, .HyperMD-header) {
+  padding-top: 0 !important;
+}
+.is-live-preview .cm-content > [contenteditable]:first-child + div,
+.is-live-preview .cm-content > div:first-child {
+  padding-top: 0 !important;
+}
+.is-live-preview .cm-content .HyperMD-header.HyperMD-header-1 {
+  padding-top: calc(var(--p-spacing) * var(--h1-margin-start-coef));
+  padding-bottom: calc(var(--p-spacing) * var(--h1-margin-end-coef));
+}
+.is-live-preview .cm-content .HyperMD-header.HyperMD-header-2 {
+  padding-top: calc(var(--p-spacing) * var(--h2-margin-start-coef));
+  padding-bottom: calc(var(--p-spacing) * var(--h2-margin-end-coef));
+}
+.is-live-preview .cm-content .HyperMD-header.HyperMD-header-3 {
+  padding-top: calc(var(--p-spacing) * var(--h3-margin-start-coef));
+  padding-bottom: calc(var(--p-spacing) * var(--h3-margin-end-coef));
+}
+.is-live-preview .cm-content .HyperMD-header.HyperMD-header-4 {
+  padding-top: calc(var(--p-spacing) * var(--h4-margin-start-coef));
+  padding-bottom: calc(var(--p-spacing) * var(--h4-margin-end-coef));
+}
+.is-live-preview .cm-content .HyperMD-header.HyperMD-header-5 {
+  padding-top: calc(var(--p-spacing) * var(--h5-margin-start-coef));
+  padding-bottom: calc(var(--p-spacing) * var(--h5-margin-end-coef));
+}
+.is-live-preview .cm-content .HyperMD-header.HyperMD-header-6 {
+  padding-top: calc(var(--p-spacing) * var(--h6-margin-start-coef));
+  padding-bottom: calc(var(--p-spacing) * var(--h6-margin-end-coef));
+}
+.is-live-preview .cm-content .HyperMD-header:has(+ .cm-table-widget) {
+  padding-bottom: 0;
+}
+.is-live-preview .cm-content .HyperMD-header:has(+ .HyperMD-header) {
+  padding-bottom: 0 !important;
+}
+
+/* === Rendered styling === */
+.markdown-rendered {
+  /* Removes margins so below rules can follow edit mode */
+}
+.markdown-rendered .el-h1 {
+  padding-top: calc(var(--p-spacing) * var(--h1-margin-start-coef));
+  padding-bottom: calc(var(--p-spacing) * var(--h1-margin-end-coef));
+}
+.markdown-rendered h1 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.markdown-rendered .el-h2 {
+  padding-top: calc(var(--p-spacing) * var(--h2-margin-start-coef));
+  padding-bottom: calc(var(--p-spacing) * var(--h2-margin-end-coef));
+}
+.markdown-rendered h2 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.markdown-rendered .el-h3 {
+  padding-top: calc(var(--p-spacing) * var(--h3-margin-start-coef));
+  padding-bottom: calc(var(--p-spacing) * var(--h3-margin-end-coef));
+}
+.markdown-rendered h3 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.markdown-rendered .el-h4 {
+  padding-top: calc(var(--p-spacing) * var(--h4-margin-start-coef));
+  padding-bottom: calc(var(--p-spacing) * var(--h4-margin-end-coef));
+}
+.markdown-rendered h4 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.markdown-rendered .el-h5 {
+  padding-top: calc(var(--p-spacing) * var(--h5-margin-start-coef));
+  padding-bottom: calc(var(--p-spacing) * var(--h5-margin-end-coef));
+}
+.markdown-rendered h5 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.markdown-rendered .el-h6 {
+  padding-top: calc(var(--p-spacing) * var(--h6-margin-start-coef));
+  padding-bottom: calc(var(--p-spacing) * var(--h6-margin-end-coef));
+}
+.markdown-rendered h6 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.markdown-rendered p, .markdown-rendered ul, .markdown-rendered pre, .markdown-rendered blockquote, .markdown-rendered .callout {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.markdown-rendered .mod-frontmatter + div, .markdown-rendered .mod-header + div, .markdown-rendered .markdown-preview-pusher + div {
+  padding-top: 0 !important;
+}
+.markdown-rendered .el-pre, .markdown-rendered .el-p, .markdown-rendered .el-blockquote, .markdown-rendered .el-div {
+  padding-top: 1.2em;
+}
+.markdown-rendered .el-p + .el-pre {
+  padding-top: 0.6em;
+}
+.markdown-rendered [class^=el-h] + div {
+  padding-top: 0;
+}

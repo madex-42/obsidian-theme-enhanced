@@ -1,0 +1,146 @@
+@import "/obsidian-general.css";
+
+/* === Additional styling */
+kbd {
+    font-family: var(--font-text);
+}
+
+/* Highlights */
+mark {
+    color: var(--text-highlight-text-color);
+    border-radius: var(--text-highlight-border-radius);
+    padding: 0 3px 0 3px;
+}
+.cm-highlight:not(.cm-formatting-highlight) {
+    color: var(--text-highlight-text-color);
+    border-radius: var(--text-highlight-border-radius);
+    padding: 0 3px 0 3px;
+}
+.cm-formatting-highlight {
+    background-color: unset !important;
+}
+
+/* Bold(strong) formatting */
+.cm-contentContainer {
+    /* --bold-color: #d2d2d2; */
+}
+strong, .cm-strong {
+    background-color: #aeaeae1f;
+    border-radius: 3px;
+    padding: 0 2px 0 2px;
+    --bold-modifier: 200;
+    /* filter: brightness(95%); */
+}
+
+/* Code blocks */
+.markdown-source-view .HyperMD-codeblock-begin .code-block-flair{
+    top: 0;
+    right: 0;
+}
+/*.cm-inline-code {
+}
+.markdown-rendered .el-pre code {
+} 
+.markdown-rendered code {
+}*/
+
+/* Images */
+.cm-contentContainer img,
+.markdown-rendered img {
+    border-radius: var(--img-corner-radius);
+}
+.cm-contentContainer img[alt*=left],
+.markdown-rendered img[alt*=left] {
+    float: left;
+    clear: both;
+    margin-right: var(--img-gallery-row-right-gap);
+}
+/* Remove br elem that represent new line after embed iamge in Preveiw mode */
+.callout .callout-content span[alt*=left] + br {
+    display: none;
+}
+
+// === Headers ===
+// Add underline for a header to more emphesise that it's a header
+@mixin headerDecorations {
+    text-decoration: underline;
+    text-decoration-color: var(--color-base-60);
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 0.2em;
+}
+.el-h4, .el-h5, .el-h6 {
+    @include headerDecorations;
+}
+.HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6 {
+    .cm-header:not(.cm-formatting) {
+        @include headerDecorations;
+    }
+}
+
+// === Headers labels ===
+.HyperMD-header {
+    &:before {
+        content: "";
+        font-size: max(0.5em, 10px);
+        font-weight: var(--font-medium);
+        color: var(--header-label-color);
+        line-height: 1lh;
+        display: block;
+        position: relative;
+        height: 0;
+        left: 97%;
+        width: 0;
+        text-wrap: nowrap;
+    }
+    @each $header in 1, 2, 3, 4, 5, 6 {
+        &.HyperMD-header-#{$header}:before {
+            content: "H#{$header}";
+        }
+    }
+}
+
+/* Lists */
+.markdown-rendered {
+    ul, ol {
+        margin: 0.5em 0;
+        --list-indent: 23px;
+    }
+}
+
+/* Dangling Line */
+.cm-line:has(br):before {
+    position: absolute;
+    display: block;
+    content: "-br-";
+    height: 100%;
+    font-size: 10px;
+    color: var(--color-base-30);
+}
+
+
+
+
+/* === Round borders for tables */
+/* https://forum.obsidian.md/t/adding-rounded-corners-to-markdown-tables-with-snippets-a-clean-solution/60551 */
+/* Fix the borders and add a radius variable */
+:root .cm-table-widget .table-editor {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+/* Add the radius */
+.cm-table-widget .table-editor th:first-child {
+    border-top-left-radius: var(--table-border-radius)
+}
+.cm-table-widget .table-editor th:last-child {
+    border-top-right-radius: var(--table-border-radius)
+}
+.cm-table-widget .table-editor tr:last-child td:first-child {
+    border-bottom-left-radius: var(--table-border-radius)
+}
+.cm-table-widget .table-editor tr:last-child td:last-child {
+    border-bottom-right-radius: var(--table-border-radius)
+}  
+/* Redo the borders */
+:root :is(td, th) {
+    border-width: 0 var(--table-border-width) var(--table-border-width) 0;
+}

@@ -1,0 +1,98 @@
+@import "/obsidian-general.css";
+
+/* === Callouts === */
+.markdown-source-view .markdown-rendered .callout-content .callout,
+.markdown-reading-view .callout-content .callout {
+    margin: 0.5em 0;
+}
+/* Center '</>' button */
+.cm-callout .edit-block-button {
+    top: 0px !important;
+}
+/* Compact all callouts */
+.callout {
+    padding: var(--size-4-2);
+    --callout-content-padding: var(--size-4-2) var(--size-4-1) var(--size-4-1);
+    --callout-radius: var(--callout-radius-custom);
+}
+.callout .callout-content > p {
+    padding: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+
+/* Custom callouts */
+body {
+    --callout-info: 65, 126, 245;
+}
+/* --- Image */
+.callout[data-callout="img"] {
+    --callout-content-padding: var(--size-4-2) var(--size-4-1) var(--size-4-1);
+    --callout-icon: image-down;
+    background: var(--callout-img-bg);
+    padding: var(--size-4-1);
+}
+.callout[data-callout="img"] .callout-content img {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Inline Note */
+.callout[data-callout="inlinenote"] {
+    --callout-color: 212, 161, 228;
+    --callout-content-padding: var(--size-4-1) var(--size-4-1) 0 var(--size-4-1);
+    --callout-icon: flag-triangle-right;
+    background: var(--callout-inlinenote-bg);
+    padding: var(--size-4-1) 1px var(--size-4-1) 1px;
+}
+
+/* --- Gallery */
+.callout[data-callout="img-gallery"] {
+    --callout-content-padding: var(--size-4-3) var(--size-4-1) var(--size-4-1);
+    --callout-color: 146, 153, 185;
+    --callout-icon: gallery-horizontal;
+    background: rgb(45 42 52 / 78%);
+}
+.callout[data-callout="img-gallery"] .callout-content p {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--img-gallery-row-right-gap);
+}
+.callout[data-callout="img-gallery"] .callout-content p br {
+    display: none;
+}
+.callout[data-callout="img-gallery"] .callout-content p img {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.callout[data-callout="img-gallery"][data-callout-metadata*="h-xs"] .callout-content p span img {
+    max-height: 80px;
+}
+.callout[data-callout="img-gallery"][data-callout-metadata*="h-s"] .callout-content p span img {
+    max-height: 120px;
+}
+.callout[data-callout="img-gallery"][data-callout-metadata*="h-m"] .callout-content p span img {
+    max-height: 200px;
+}
+.callout[data-callout="img-gallery"][data-callout-metadata*="h-l"] .callout-content p span img {
+    max-height: 300px;
+}
+.callout[data-callout="img-gallery"][data-callout-metadata*="h-xl"] .callout-content p span img {
+    max-height: 400px;
+}
+/* --- */
+.callout[data-callout="img-gallery"][data-callout-metadata*="c2"] .callout-content p span {
+    width: calc(50% - 6px);
+}
+.callout[data-callout="img-gallery"][data-callout-metadata*="c3"] .callout-content p span {
+    width: calc(33% - 6px);
+}
+.callout[data-callout="img-gallery"][data-callout-metadata*="c4"] .callout-content p span {
+    width: calc(25% - 6px);
+}
+.callout[data-callout="img-gallery"][data-callout-metadata*="c5"] .callout-content p span {
+    width: calc(20% - 6px);
+}

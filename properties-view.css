@@ -1,0 +1,57 @@
+@import "/obsidian-general.css";
+
+/* === Properties view */
+.metadata-container {
+    /* margin-block-end: 0px; */
+    --input-height: 100%;
+    --metadata-input-height: 1em;
+    --metadata-label-font-size: 0.8em;
+    --metadata-input-font-size: 0.8em;
+    --metadata-padding: 0;
+}
+.is-phone .metadata-container,
+.workspace-drawer .metadata-container {
+    --metadata-divider-width: 0;
+}
+.metadata-container:hover .collapse-indicator {
+    opacity: 1;
+    top: 2px;
+}
+.metadata-container.is-collapsed {
+    border-top: 1px solid;
+    border-top-style: dashed;
+    border-top-color: hsl(from var(--collapse-icon-color-collapsed) h s l / 0.2);
+}
+.metadata-container.is-collapsed .collapse-indicator {
+    top: -10px;
+    transition: top 100ms ease-in-out;
+    opacity: 0.6;
+}
+.metadata-container .metadata-properties-heading {
+    padding: 0;
+    display: block;
+    margin: 0;
+}
+.metadata-properties-title {
+    font-size: 0.8em;
+    color: var(--text-muted);
+    display: none;
+}
+.metadata-input-longtext {
+    padding: 1px 3px;
+}
+.metadata-property-icon {
+    padding: 0;
+}
+.metadata-property .multi-select-container {
+    padding: 1px 3px;
+}
+.metadata-container .metadata-add-button {
+    display: block;
+    height: 0;
+    line-height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+/* === Properties view */

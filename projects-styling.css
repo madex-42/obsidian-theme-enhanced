@@ -1,0 +1,52 @@
+.projects-container .projects--board--column {
+    background: transparent;
+    border: none;
+}
+.projects-container .projects--board--card {
+    background-color: var(--background-secondary);
+}
+
+.projects-container .container.primary .right::after {
+    /* border: 1px solid gray; */
+    border-radius: 3px;
+    content: "";
+    display: block;
+    width: 15px;
+}
+
+.projects-container .container.secondary {
+    padding: 0;
+    /* padding-top: 2px; */
+    height: 30px;
+    width: 12px;
+    overflow: hidden;
+    align-items: start;
+    /* background-color: transparent; */
+    border: none;
+    position: absolute !important;
+    right: 10px;
+    top: 46px;
+    z-index: 100;
+    /* padding-left: 15px; */
+    transition-delay: 350ms;
+    /* align-items: end; */
+}
+
+.projects-container .container.secondary .right::after {
+    content: "=";
+    display: block;
+    /* font-size: 10px; */
+}
+
+.projects-container .container.secondary:hover {
+    height: 40px;
+    width: 100%;
+    padding-right: 5px;
+    padding-top: 0px;
+    transition-delay: 250ms;
+}
+
+/* .projects-container .container.secondary:hover .left::before {
+    transition-delay: 250ms;
+    content: none;
+} */
