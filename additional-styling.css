@@ -27,10 +27,10 @@ mark {
 }
 
 strong, .cm-strong {
-  background-color: rgba(174, 174, 174, 0.1215686275);
-  border-radius: 3px;
-  padding: 0 2px 0 2px;
-  --bold-modifier: 200;
+  /* background-color: rgba(174, 174, 174, 0.1215686275); */
+  /* border-radius: 3px; */
+  /* padding: 0 2px 0 2px; */
+  /* --bold-modifier: 400; */
   /* filter: brightness(95%); */
 }
 
@@ -62,20 +62,6 @@ strong, .cm-strong {
 /* Remove br elem that represent new line after embed iamge in Preveiw mode */
 .callout .callout-content span[alt*=left] + br {
   display: none;
-}
-
-.el-h4, .el-h5, .el-h6 {
-  text-decoration: underline;
-  text-decoration-color: var(--color-base-60);
-  text-decoration-thickness: 0.1em;
-  text-underline-offset: 0.2em;
-}
-
-.HyperMD-header-4 .cm-header:not(.cm-formatting), .HyperMD-header-5 .cm-header:not(.cm-formatting), .HyperMD-header-6 .cm-header:not(.cm-formatting) {
-  text-decoration: underline;
-  text-decoration-color: var(--color-base-60);
-  text-decoration-thickness: 0.1em;
-  text-underline-offset: 0.2em;
 }
 
 .HyperMD-header:before {
@@ -120,7 +106,7 @@ strong, .cm-strong {
 .cm-line:has(br):before {
   position: absolute;
   display: block;
-  content: "-br-";
+  content: "|-";
   height: 100%;
   font-size: 10px;
   color: var(--color-base-30);

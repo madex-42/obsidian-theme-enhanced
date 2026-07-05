@@ -5,7 +5,11 @@ body {
     --code-border-width: 1px;
     --code-size: var(--font-smallest);
     --code-tag: #cc9633;
-    --text-highlight-bg: rgb(108 134 48 / 55%);
+    --text-highlight-bg: rgb(30 121 156 / 55%);
+
+    --bold-color: rgb(245 245 245);
+    --bold-modifier: 300;
+    --code-normal: rgb(232 109 160);
 
     /* Note Title */
     --inline-title-size: 1.8em;
@@ -14,21 +18,21 @@ body {
     --font-monospace-theme: "Menlo";
 
     /* Headers */
-    --h1-color: #a897d9;
-    --h2-color: #8a8dd3;
-    --h3-color: #8f98e0;
-    
-    --h4-color: var(--color-base-80);
-    --h5-color: var(--color-base-70);
-    --h6-color: var(--color-base-60);
+    --h1-color: #d18fd9;
+    --h2-color: #b988db;
+    --h3-color: #a18cde;
 
-    --h1-weight: var(--font-semibold);
-    --h2-weight: var(--font-medium);
+    --h4-color: #7c86d9;
+    --h5-color: #8389c0;
+    --h6-color: #707d9a;
+
+    --h1-weight: var(--font-bold);
+    --h2-weight: var(--font-semibold);
     --h3-weight: var(--font-medium);
 
-    --h4-weight: var(--font-normal);
+    --h4-weight: var(--font-medium);
     --h5-weight: var(--font-normal);
-    --h6-weight: var(--font-medium);
+    --h6-weight: var(--font-normal);
     
     --h1-line-height: 1.2;
     --h2-line-height: 1.2;
@@ -50,18 +54,18 @@ body {
     /* === Custom vars === */
     /* Blocks structure vars */
     --h1-margin-start-coef: 3.2;
-    --h1-margin-end-coef: 0.9;
-    --h2-margin-start-coef: 2.1;
-    --h2-margin-end-coef: 0.8;
-    --h3-margin-start-coef: 1.8;
-    --h3-margin-end-coef: 0.7;
+    --h1-margin-end-coef: 1.3;
+    --h2-margin-start-coef: 2.4;
+    --h2-margin-end-coef: 1.2;
+    --h3-margin-start-coef: 2;
+    --h3-margin-end-coef: 1.1;
     
-    --h4-margin-start-coef: 1.65;
-    --h4-margin-end-coef: 0.8;
-    --h5-margin-start-coef: 1.1;
-    --h5-margin-end-coef: 0.6;
-    --h6-margin-start-coef: 0.6;
-    --h6-margin-end-coef: 0.5;
+    --h4-margin-start-coef: 1.8;
+    --h4-margin-end-coef: 1;
+    --h5-margin-start-coef: 1.4;
+    --h5-margin-end-coef: 0.8;
+    --h6-margin-start-coef: 1;
+    --h6-margin-end-coef: 0.7;
 
     /* Styling */
     --header-label-color: #8d8d8d59;
@@ -94,12 +98,17 @@ body {
     --dataview-table-alt-row-bg-color-hover: var(--background-modifier-hover);
 }
 
+body div[class^='el-h'] + div[class^='el-h'],
 body .HyperMD-header + .HyperMD-header {
-    --h2-margin-start-coef: 1;
-    --h3-margin-start-coef: 0.9;    
+    --h2-margin-start-coef: 2;
+    /* --h3-margin-start-coef: 0.9;    
     --h4-margin-start-coef: 0.85;
     --h5-margin-start-coef: 0.7;
-    --h6-margin-start-coef: 0.6;
+    --h6-margin-start-coef: 0.6; */
+}
+
+body .is-flashing {
+    --text-highlight-bg: #576d8675;
 }
 
 

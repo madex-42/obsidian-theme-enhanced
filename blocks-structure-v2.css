@@ -15,7 +15,7 @@
   padding-top: 1.2em;
 }
 .is-live-preview .cm-content .cm-line + .cm-line {
-  padding-top: 0.4em;
+  padding-top: 0.5em;
 }
 .is-live-preview .cm-content .media-embed {
   padding-top: 1.2em;
@@ -25,7 +25,10 @@
   padding-top: 0.6em;
 }
 .is-live-preview .cm-content .HyperMD-list-line + .HyperMD-list-line {
-  padding-top: 0.4em;
+  padding-top: 0.35em;
+}
+.is-live-preview .cm-content .HyperMD-list-line {
+  padding-bottom: 0;
 }
 .is-live-preview .cm-content .media-embed:has(+ .HyperMD-quote, + .cm-callout, + .HyperMD-codeblock-begin), .is-live-preview .cm-content .cm-line:has(+ .HyperMD-quote, + .cm-callout, + .HyperMD-codeblock-begin) {
   padding-bottom: 1.2em;
@@ -39,7 +42,7 @@
 .is-live-preview .cm-content .cm-line:has(> .cm-trailing-space-new-line) + .cm-line {
   padding-top: 0.2em;
 }
-.is-live-preview .cm-content .cm-callout + .cm-line:has(> br), .is-live-preview .cm-content .HyperMD-quote + .cm-line:has(> br), .is-live-preview .cm-content .HyperMD-codeblock-end + .cm-line:has(> br) {
+.is-live-preview .cm-content .cm-callout + .cm-line:has(> br), .is-live-preview .cm-content .HyperMD-quote + .cm-line:has(> br), .is-live-preview .cm-content .HyperMD-codeblock-end + .cm-line:has(> br), .is-live-preview .cm-content .HyperMD-list-line + .cm-line:has(> br) {
   line-height: 1.2em;
 }
 .is-live-preview .cm-content .HyperMD-quote, .is-live-preview .cm-content .HyperMD-codeblock {
@@ -97,85 +100,96 @@
   padding-bottom: 0 !important;
 }
 
-/* === Rendered styling === */
-.markdown-rendered {
-  /* Removes margins so below rules can follow edit mode */
+.view-content .markdown-rendered .el-p p br {
+  content: " ";
+  display: block;
+  height: 0.4em;
 }
-.markdown-rendered .el-h1 {
+.view-content .markdown-rendered .el-h1 {
   padding-top: calc(var(--p-spacing) * var(--h1-margin-start-coef));
   padding-bottom: calc(var(--p-spacing) * var(--h1-margin-end-coef));
 }
-.markdown-rendered h1 {
+.view-content .markdown-rendered h1 {
   margin-block-start: 0;
   margin-block-end: 0;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
-.markdown-rendered .el-h2 {
+.view-content .markdown-rendered .el-h2 {
   padding-top: calc(var(--p-spacing) * var(--h2-margin-start-coef));
   padding-bottom: calc(var(--p-spacing) * var(--h2-margin-end-coef));
 }
-.markdown-rendered h2 {
+.view-content .markdown-rendered h2 {
   margin-block-start: 0;
   margin-block-end: 0;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
-.markdown-rendered .el-h3 {
+.view-content .markdown-rendered .el-h3 {
   padding-top: calc(var(--p-spacing) * var(--h3-margin-start-coef));
   padding-bottom: calc(var(--p-spacing) * var(--h3-margin-end-coef));
 }
-.markdown-rendered h3 {
+.view-content .markdown-rendered h3 {
   margin-block-start: 0;
   margin-block-end: 0;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
-.markdown-rendered .el-h4 {
+.view-content .markdown-rendered .el-h4 {
   padding-top: calc(var(--p-spacing) * var(--h4-margin-start-coef));
   padding-bottom: calc(var(--p-spacing) * var(--h4-margin-end-coef));
 }
-.markdown-rendered h4 {
+.view-content .markdown-rendered h4 {
   margin-block-start: 0;
   margin-block-end: 0;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
-.markdown-rendered .el-h5 {
+.view-content .markdown-rendered .el-h5 {
   padding-top: calc(var(--p-spacing) * var(--h5-margin-start-coef));
   padding-bottom: calc(var(--p-spacing) * var(--h5-margin-end-coef));
 }
-.markdown-rendered h5 {
+.view-content .markdown-rendered h5 {
   margin-block-start: 0;
   margin-block-end: 0;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
-.markdown-rendered .el-h6 {
+.view-content .markdown-rendered .el-h6 {
   padding-top: calc(var(--p-spacing) * var(--h6-margin-start-coef));
   padding-bottom: calc(var(--p-spacing) * var(--h6-margin-end-coef));
 }
-.markdown-rendered h6 {
+.view-content .markdown-rendered h6 {
   margin-block-start: 0;
   margin-block-end: 0;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
-.markdown-rendered p, .markdown-rendered ul, .markdown-rendered pre, .markdown-rendered blockquote, .markdown-rendered .callout {
+.view-content .markdown-rendered p, .view-content .markdown-rendered ul, .view-content .markdown-rendered pre, .view-content .markdown-rendered blockquote, .view-content .markdown-rendered .callout {
   margin-block-start: 0;
   margin-block-end: 0;
   margin-top: 0;
   margin-bottom: 0;
 }
-.markdown-rendered .mod-frontmatter + div, .markdown-rendered .mod-header + div, .markdown-rendered .markdown-preview-pusher + div {
+.view-content .markdown-rendered .mod-frontmatter + div, .view-content .markdown-rendered .mod-header + div, .view-content .markdown-rendered .markdown-preview-pusher + div {
   padding-top: 0 !important;
 }
-.markdown-rendered .el-pre, .markdown-rendered .el-p, .markdown-rendered .el-blockquote, .markdown-rendered .el-div {
+.view-content .markdown-rendered .el-pre, .view-content .markdown-rendered .el-p, .view-content .markdown-rendered .el-blockquote, .view-content .markdown-rendered .el-div {
   padding-top: 1.2em;
 }
-.markdown-rendered .el-p + .el-pre {
+.view-content .markdown-rendered .el-p + .el-pre {
   padding-top: 0.6em;
 }
-.markdown-rendered [class^=el-h] + div {
+.view-content .markdown-rendered ul > li {
+  padding-top: 0.2em;
+  padding-bottom: 0;
+}
+.view-content .markdown-rendered .el-ul > ul > li:first-child {
+  padding-top: 0;
+}
+.view-content .markdown-rendered div[class^=el-h]:has(+ div[class^=el-h]) {
+  padding-bottom: 0;
+}
+.view-content .markdown-rendered div[class^=el-h] + div:not(div[class^=el-h]) {
   padding-top: 0;
 }

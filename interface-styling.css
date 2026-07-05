@@ -1,0 +1,49 @@
+/* Panel selector */
+.is-translucent .workspace .workspace-tabs:not(.mod-top) div.workspace-tab-header-container {
+    margin: 0 5px;
+    border-radius: 8px;
+    background-color: rgb(53 53 53 / 40%) !important;
+}
+.workspace .workspace-tabs:not(.mod-top) div.workspace-tab-header-container {
+    background-color: rgb(30 30 30 / 40%) !important;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* Panel toolbar */
+.workspace .mod-sidedock .workspace-tabs .nav-header {
+    padding: 2px;
+    background-color: rgb(26 26 26 / 40%);;
+    border-radius: 0 0 8px 8px;
+    border: var(--tab-outline-width) solid var(--tab-outline-color);
+    border-top: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.is-translucent .workspace .mod-sidedock .workspace-tabs .nav-header {
+    border-radius: 8px;
+    background-color: rgb(35 35 35 / 40%);
+}
+/* Panel toolbar other then the top one */
+.is-translucent .workspace .mod-sidedock .workspace-tabs:not(.mod-top) .nav-header {
+    border-radius: 0 0 8px 8px;
+}
+.workspace .mod-sidedock .nav-header .nav-buttons-container {
+    gap: 5px;
+}
+.workspace .mod-sidedock .nav-header .nav-action-button svg {
+    height: 14px;
+}
+
+/* Devider between panels in sidebars */
+/* .mod-sidedock .workspace-tabs .workspace-leaf-resize-handle {
+    background-color: rgba(38, 38, 38, 0.4);
+    border-radius: 2px;
+    width: calc(100% - 20px) !important;
+    margin-left: 10px;
+}
+@media (hover: hover) {
+    .mod-sidedock .workspace-tabs .workspace-leaf-resize-handle:hover {
+        background-color: var(--divider-color-hover);
+    }   
+} */

@@ -62,20 +62,20 @@ strong, .cm-strong {
 
 // === Headers ===
 // Add underline for a header to more emphesise that it's a header
-@mixin headerDecorations {
-    text-decoration: underline;
-    text-decoration-color: var(--color-base-60);
-    text-decoration-thickness: 0.1em;
-    text-underline-offset: 0.2em;
-}
-.el-h4, .el-h5, .el-h6 {
-    @include headerDecorations;
-}
-.HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6 {
-    .cm-header:not(.cm-formatting) {
-        @include headerDecorations;
-    }
-}
+// @mixin headerDecorations {
+//     text-decoration: underline;
+//     text-decoration-color: var(--color-base-60);
+//     text-decoration-thickness: 0.1em;
+//     text-underline-offset: 0.2em;
+// }
+// .el-h4, .el-h5, .el-h6 {
+//     @include headerDecorations;
+// }
+// .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6 {
+//     .cm-header:not(.cm-formatting) {
+//         @include headerDecorations;
+//     }
+// }
 
 // === Headers labels ===
 .HyperMD-header {
@@ -111,7 +111,7 @@ strong, .cm-strong {
 .cm-line:has(br):before {
     position: absolute;
     display: block;
-    content: "-br-";
+    content: "br";
     height: 100%;
     font-size: 10px;
     color: var(--color-base-30);
